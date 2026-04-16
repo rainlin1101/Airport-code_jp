@@ -1,0 +1,129 @@
+:root {
+  color-scheme: light;
+  font-family: "Noto Sans JP", system-ui, -apple-system, sans-serif;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+  color: #1f2937;
+}
+
+.app {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 16px 24px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: #4b5563;
+}
+
+.credit {
+  margin: 6px 0 0;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  letter-spacing: 0.08em;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.question h2 {
+  margin: 8px 0;
+  font-size: 2rem;
+}
+
+.meta {
+  margin: 0;
+  color: #4b5563;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+#answerInput {
+  flex: 1;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+#feedback {
+  min-height: 24px;
+  margin: 8px 0 0;
+  font-weight: 700;
+}
+
+#feedback.ok {
+  color: #0f766e;
+}
+
+#feedback.ng {
+  color: #b91c1c;
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+}
+
+.wrongbook ul {
+  margin: 8px 0;
+  padding-left: 18px;
+}
+
+.wrongbook li {
+  margin-bottom: 4px;
+}
