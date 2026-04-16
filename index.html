@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>空港コード練習</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <h1>空港コード練習</h1>
+        <p class="subtitle">都市名から IATA コードを答える学習アプリ</p>
+        <p class="credit">FUZELIN</p>
+      </header>
+
+      <section class="panel controls">
+        <label class="toggle">
+          <input id="shuffleMode" type="checkbox" checked />
+          <span>問題を毎回ランダムに出題</span>
+        </label>
+        <button id="restartBtn" type="button">最初からやり直し</button>
+      </section>
+
+      <section class="panel question" id="questionPanel">
+        <p class="meta"><span id="progressText">0 / 0</span></p>
+        <h2 id="cityText">開始してください</h2>
+      </section>
+
+      <section class="panel answer">
+        <form id="answerForm" autocomplete="off">
+          <label for="answerInput">IATA コード</label>
+          <div class="input-row">
+            <input id="answerInput" type="text" maxlength="3" placeholder="例: HND" required />
+            <button type="submit">回答</button>
+          </div>
+        </form>
+        <p id="feedback" aria-live="polite"></p>
+      </section>
+
+      <section class="panel stats">
+        <p>正解: <strong id="correctCount">0</strong></p>
+        <p>不正解: <strong id="wrongCount">0</strong></p>
+      </section>
+
+      <section class="panel wrongbook">
+        <h3>錯題本（ミス一覧）</h3>
+        <p id="wrongbookEmpty">まだミスはありません。</p>
+        <ul id="wrongbookList"></ul>
+        <button id="retryWrongBtn" type="button" disabled>ミス問題だけ再挑戦</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
