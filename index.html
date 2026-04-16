@@ -10,11 +10,18 @@
     <main class="app">
       <header class="app-header">
         <h1>空港コード練習</h1>
-        <p class="subtitle">都市名から IATA コードを答える学習アプリ</p>
+        <p class="subtitle">都市名・空港名と IATA コードを答える学習アプリ</p>
         <p class="credit">FUZELIN</p>
       </header>
 
       <section class="panel controls">
+        <label>
+          分類
+          <select id="categorySelect">
+            <option value="international">国際</option>
+            <option value="domestic">日本国内</option>
+          </select>
+        </label>
         <label class="toggle">
           <input id="shuffleMode" type="checkbox" checked />
           <span>問題を毎回ランダムに出題</span>
@@ -24,14 +31,15 @@
 
       <section class="panel question" id="questionPanel">
         <p class="meta"><span id="progressText">0 / 0</span></p>
-        <h2 id="cityText">開始してください</h2>
+        <p class="prompt" id="promptText">開始してください</p>
+        <h2 id="questionText">—</h2>
       </section>
 
       <section class="panel answer">
         <form id="answerForm" autocomplete="off">
-          <label for="answerInput">IATA コード</label>
+          <label for="answerInput" id="answerLabel">回答</label>
           <div class="input-row">
-            <input id="answerInput" type="text" maxlength="3" placeholder="例: HND" required />
+            <input id="answerInput" type="text" maxlength="20" placeholder="回答を入力" required />
             <button type="submit">回答</button>
           </div>
         </form>
