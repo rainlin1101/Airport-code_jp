@@ -105,7 +105,8 @@ const domesticData = [
   { city: "大分", iata: "OIT" },
   { city: "熊本", iata: "KMJ" },
   { city: "沖縄", iata: "OKA" },
-  { city: "宮古", iata: "MMY" }
+  { city: "宮古", iata: "MMY" },
+  { city: "利尻", iata: "RIS" }
 ];
 
 const state = {
